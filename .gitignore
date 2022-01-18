@@ -13,8 +13,8 @@ Thumbs.db
 */.ipynb_checkpoints/*
 /mec-3.4.1-api-mini-project/api_key.json
 /Kaggle_Examples/
-/archive/
-/vgg16_imgnet_cnn.h5
+/Archive/
+/Model_Files/
 
 # VSCode
 .vscode/*
