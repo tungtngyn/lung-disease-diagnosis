@@ -14,7 +14,11 @@ Thumbs.db
 /mec-3.4.1-api-mini-project/api_key.json
 /Kaggle_Examples/
 /Archive/
-/Model_Files/
+/Round1/
+/Round2/
+/Round3/
+/Round4/
+/Scaled_Prototype/
 
 # VSCode
 .vscode/*
