@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
+from pathlib import Path
 
 from tensorflow.keras.utils import img_to_array
 from tensorflow.keras.models import load_model
@@ -29,7 +30,7 @@ labels = {
 if __name__ == '__main__':
     
     # Load and cache model
-    model = load_model('ucsd-mle-dl-prototype')
+    model = load_model(Path('./ucsd-mle-dl-prototype'))
 
     # Streamlit GUI
     st.title('Demo - Lung Disease Diagnosis')
@@ -55,7 +56,7 @@ if __name__ == '__main__':
         st.image(img_resized)
 
     else:
-        img = Image.open('imgs/6_Effusion.png').convert('RGB')
+        img = Image.open(Path('./imgs/6_Effusion.png')).convert('RGB')
         img_resized = img.resize((256, 256))
         st.title("Sample Image:")
         st.write("""
@@ -98,5 +99,5 @@ if __name__ == '__main__':
 
     st.title('Additional Sample Images')
     st.write('Shown below are some additional samples of Chest X-Ray images and their associated true label.')
-    img = Image.open('imgs/overview.png')
+    img = Image.open(Path('./imgs/overview.png'))
     st.image(img)
