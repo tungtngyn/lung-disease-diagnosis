@@ -29,7 +29,7 @@ labels = {
 if __name__ == '__main__':
     
     # Load and cache model
-    model = load_model(r'./ucsd-mle-dl-prototype')
+    model = load_model('ucsd-mle-dl-prototype')
 
     # Streamlit GUI
     st.title('Demo - Lung Disease Diagnosis')
@@ -55,7 +55,7 @@ if __name__ == '__main__':
         st.image(img_resized)
 
     else:
-        img = Image.open('./imgs/6_Effusion.png').convert('RGB')
+        img = Image.open('imgs/6_Effusion.png').convert('RGB')
         img_resized = img.resize((256, 256))
         st.title("Sample Image:")
         st.write("""
@@ -98,5 +98,5 @@ if __name__ == '__main__':
 
     st.title('Additional Sample Images')
     st.write('Shown below are some additional samples of Chest X-Ray images and their associated true label.')
-    img = Image.open('./imgs/overview.png')
+    img = Image.open('imgs/overview.png')
     st.image(img)
