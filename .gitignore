@@ -130,3 +130,6 @@ dmypy.json
 
 # model files
 /models/*
+
+# macOS files
+.DS_Store
